@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skipthegames</title>
+    <link rel="shortcut icon" href="./asset/fav-icon.png" type="image/x-icon">
+
+    <!-- font -->
+    <link href="https://www.dafontfree.net/embed/ZGlhdmxvLWJvbGQmZGF0YS80Mi9kLzkyOTU2L0RpYXZsb19CT0xEX0lJXzM3Lm90Zg"
+        rel="stylesheet" type="text/css" />
+
+    <style>
+        @font-face {
+            font-family: "diavlo-bold";
+            src: url("./asset/font/Diavlo_BOLD_II_37.otf") format("opentype"), ;
+            src: url("./asset/font/Diavlo_BLACK_II_37.otf") format("opentype"), ;
+            src: url("./asset/font/Diavlo_BOOK_II_37.otf") format("opentype"), ;
+            src: url("./asset/font/Diavlo_LIGHT_II_37.otf") format("opentype"), ;
+            src: url("./asset/font/Diavlo_MEDIUM_II_37.otf") format("opentype");
+        }
+
+        body {
+            font-family: open sans, helvetica neue, helvetica, arial, sans-serif !important;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        /* .upper-area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        } */
+
+        .main-container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 95px;
+        }
+
+        .header-title {
+            font-family: "diavlo-bold", sans-serif !important;
+            color: #990032;
+            font-size: 36px;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .title-out {
+            font-size: 18px;
+        }
+
+        .header-des {
+            margin-top: 10px;
+            color: #222;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 1.3rem;
+        }
+
+        /*  login */
+
+        .login-title {
+            font-size: 34px;
+            color: #222;
+            font-weight: 500;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+
+        .form-area input:not([type=submit]) {}
+
+        .form-area input {
+            /* position: absolute; */
+            border-style: solid;
+            border-width: 1px;
+            border-color: #ccc;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+            color: rgba(0, 0, 0, .75);
+            display: block;
+            font-size: .9rem;
+            /* margin: 0 0 1rem; */
+            padding: 0.7rem;
+            height: 2.5rem;
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            outline: none;
+            transition: all .15s linear;
+
+        }
+
+        .email-alert {
+            display: block;
+            background: #cf3245;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            padding: 0.7rem;
+            margin-top: -2px;
+            margin-bottom: 1.2rem;
+            color: #fff;
+        }
+
+        .show-pass {
+            text-decoration: underline;
+            color: #903;
+            font-size: 1rem;
+            margin-top: 10px !important;
+        }
+
+        .form-area input[type=password] {
+            margin-bottom: 0.3rem;
+        }
+
+        .form-area input[type=submit] {
+            margin-top: 1.4rem;
+            margin-bottom: 1.25rem;
+            border-style: solid;
+            border-width: 0;
+            cursor: pointer;
+            font-weight: 400;
+            /* margin: 0 0 1.25rem; */
+            text-decoration: none;
+            text-align: center;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 0;
+            display: inline-block;
+            padding-top: 1.2rem;
+            padding-right: 2rem;
+            padding-bottom: 2.2rem;
+            padding-left: 2rem;
+            font-size: 1.2rem;
+            background-color: #2ba6cb;
+            border-color: #2285a2;
+            color: #fff;
+            transition: background-color 300ms ease-out;
+            border-radius: 5px;
+        }
+
+        .pass-title {
+            color: red;
+            margin: 1rem 0 1rem 0;
+            font-size: 22px;
+        }
+
+        .password-click {
+            text-decoration: underline;
+            color: #903;
+        }
+
+        .password-check img {
+            width: 14px;
+        }
+
+        .pass-des {
+            margin-bottom: 2rem;
+            font-size: 13px;
+        }
+
+        .pass-span {
+            color: #903;
+        }
+
+        .terms-policy {
+            font-size: 13px;
+            margin-top: 3rem;
+            margin-bottom: 0;
+        }
+
+        .terms-span {
+            color: #903;
+        }
+
+        /* user content */
+        .user-content {
+            margin-top: 72px;
+        }
+
+        .user-content h2 {
+            font-size: 34px;
+            color: #222;
+            font-weight: 500;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .user-content h4 {
+            color: #6E6D6D;
+            font-weight: 400;
+            font-size: 22px;
+            text-decoration: underline;
+            margin-top: 20px;
+        }
+
+        /* footer */
+        .footer-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 0;
+        }
+
+        .footer-links li {
+            display: inline-block;
+            margin-right: 16px;
+        }
+
+        .footer-links li a {
+            color: #903;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 22px;
+        }
+
+        #home {
+            color: #6E6D6D;
+            font-weight: 400;
+            font-size: 22px;
+        }
+
+        .footer-container p {
+            width: 40%;
+            color: #6E6D6D;
+            font-weight: 400;
+            font-size: 22px;
+            margin-top: 0;
+        }
+
+        .hori-line {
+            border: 0;
+            height: 1px;
+            background-color: #dfdfdf;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <section class="upper-area">
+
+
+
+        </section>
+
+        <div class="main-container">
+
+            <div class="form-area">
+
+                <h2 class="header-title">Skipthegames.<span class="title-out">EU</span></h2>
+                <h4 class="header-des">Skip the games. Get satisfaction.</h4>
+
+                <form action="/login" method="post">
+
+                    <h3 class="login-title">Log in to your account</h3>
+
+                    <div>
+                        <input type="email" name="email" placeholder="Your email">
+                        <span class="email-alert">Please enter a valid email address</span>
+                    </div>
+                    <div>
+                        <input type="password" name="password" id="" placeholder="Password">
+                        <small class="show-pass">Show password</small>
+                    </div>
+                    <input type="submit" value="Log in">
+
+                </form>
+
+                <div class="password-check">
+                    <h4 class="pass-title">Password not working? <span class="password-click">Click here</span></h4>
+                    <p class="pass-des">By clicking "Log in", you accept <span class="pass-span">Skipthegames.com's
+                            Terms
+                            and Conditions of Use</span> <img src="./asset/click.png" alt=""></p>
+
+                    <p class="terms-policy">This site is protected by hCaptcha and its <span class="terms-span">Privacy
+                            Policy</span> and <span class="terms-span">Terms of Service</span> apply.</p>
+
+                </div>
+            </div>
+
+            <div class="user-content">
+
+                <h2>First time here?</h2>
+                <h4>Post your first ad</h4>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <hr class="hori-line">
+
+    <footer>
+
+        <div class="footer-container">
+            <p>&copy;Skipthegames.eu</p>
+
+            <ul class="footer-links">
+                <li><a id="home" href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Escort Info</a></li>
+            </ul>
+
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+
+</html>
